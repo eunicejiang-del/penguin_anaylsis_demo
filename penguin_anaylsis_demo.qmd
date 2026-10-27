@@ -14,20 +14,23 @@ library(palmerpenguins)
 
 ```
 
-How many penguins in the dataset for each species?
+**How many penguins in the dataset for each species?**
 
 ```{r}
 count(penguins)
 ```
 
-count(penguins)
+**body mass by species**
 
-body mass by species
+```{r}
 
-penguins \|\>
+penguins |>
+  ggplot(aes(x = species, y = body_mass_g, fill = species)) +
+  geom_boxplot() +
+  labs(
+    title = "Penguin Body Mass by Species",
+    x = "Species",
+    y = "Body Mass"
+  )
 
-ggplot(aes(x = species, y = body_mass_g),
-
-fill = species
-
-geom_boxplot()
+```
