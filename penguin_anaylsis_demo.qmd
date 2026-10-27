@@ -1,0 +1,33 @@
+---
+title: "penguin_anaylsis_demo"
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+```{r}
+
+library(tidyverse)
+library(palmerpenguins)
+
+
+```
+
+How many penguins in the dataset for each species?
+
+```{r}
+count(penguins)
+```
+
+count(penguins)
+
+body mass by species
+
+penguins \|\>
+
+ggplot(aes(x = species, y = body_mass_g),
+
+fill = species
+
+geom_boxplot()
